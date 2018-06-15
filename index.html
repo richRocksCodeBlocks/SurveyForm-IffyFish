@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>FCC Survey Form</title>
+    <!-- Materialize CSS -->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="blue lighten-1">
+<div class="container white m5 z-depth-2">
+    <div class="row">
+        <div class="col s10 offset-s1">
+
+            <h1 class="center-align" id="title"><img class="center-align" src="img/iffyfishco.png" height="auto"
+                                                     width="25%"/><br>Iffy Fish Seafood Co</h1>
+
+            <p id="description">
+                Here at the Iffy Fish Seafood Co., customer satisfaction is priority number one. If you have eaten some
+                Iffy Fish we would like to hear from you. We may not reply to every comment but we assure that ownership
+                reads each and every one received, even the <em>iffy</em> ones.
+            </p>
+        </div>
+        <div class="col s10 offset-s1">
+            <form id="survey-form" action="#">
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <label class="active" for="name" id="name-label">Name</label>
+                        <input type="text" id="name" placeholder="Name" required>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <label for="email" id="email-label">Email</label>
+                        <input type="email" id="email" placeholder="email@domain.com" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <label for="number" id="number-label">Order Number</label>
+                        <input type="number" id="number" placeholder="> 100236 && < 999999" min="100237" max="999999"
+                               required>
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <select class="input-field" id="dropdown" required>
+                            <option value="" disabled selected>Choose your option</option>
+                            <option value="1">Dine In</option>
+                            <option value="2">Take Out</option>
+                            <option value="3">Uber Eats</option>
+                            <option value="3">Other</option>
+                        </select>
+                        <label>How did you get your Iffy Fish?</label>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="input-field col s12 m6">
+                        <p>Would you recommend Iffy Fish?</p>
+                        <p>
+                            <label>
+                                <input name="recommendation" value="1" type="radio"/>
+                                <span>Definitely</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="recommendation" value="2" type="radio"/>
+                                <span>Maybe</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="recommendation" value="3" type="radio"/>
+                                <span>Probably Not</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input name="recommendation" value="4" type="radio"/>
+                                <span>No Way Jose</span>
+                            </label>
+                        </p>
+
+                    </div>
+                    <div class="input-field col s12 m6">
+                        <p>Which meal did you eat Iffy Fish?</p>
+                        <p>
+                            <label>
+                                <input type="checkbox" value="1"/>
+                                <span>Breakfast</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" value="2"/>
+                                <span>Lunch</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" value="3"/>
+                                <span>Dinner</span>
+                            </label>
+                        </p>
+                        <p>
+                            <label>
+                                <input type="checkbox" value="4"/>
+                                <span>Late Night</span>
+                            </label>
+                        </p>
+                        <p>
+                    </div>
+                </div>
+                <div class="row">
+
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="textarea1" class="materialize-textarea" data-length="500"></textarea>
+                                <label for="textarea1">Please tell us about your Iffy Fish experience.</label>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="row">
+                    <div class="col s12 center-align">
+                        <button class="btn waves-effect waves-light z-depth-2" type="submit" id="submit">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<!-- Optional JavaScript -->
+<script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+<script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+<!-- Materialize JS -->
+<script src="js/materialize.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('select').formSelect();
+        $('input#input_text, textarea#textarea1').characterCounter();
+    });
+
+</script>
+</body>
+</html>
